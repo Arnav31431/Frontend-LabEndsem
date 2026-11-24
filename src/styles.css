@@ -1,0 +1,292 @@
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #172033;
+  background: #f4f6fb;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 88% 14%, rgba(64, 91, 219, 0.07), transparent 22rem),
+    #f4f6fb;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 112px;
+  background: #fff;
+  border-bottom: 1px solid #e7eaf1;
+}
+
+.header-inner,
+.content,
+.footer {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #405bd7;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px;
+  box-shadow: 0 8px 18px rgba(64, 91, 215, 0.18);
+}
+
+.brand-mark span {
+  width: 5px;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.brand-mark span:nth-child(1) { height: 12px; }
+.brand-mark span:nth-child(2) { height: 20px; }
+.brand-mark span:nth-child(3) { height: 16px; }
+
+.eyebrow,
+.section-label {
+  margin: 0 0 3px;
+  color: #8a92a3;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.term {
+  color: #6d7587;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.term span {
+  margin: 0 6px;
+  color: #b1b6c2;
+}
+
+.content {
+  flex: 1;
+  padding-top: 52px;
+  padding-bottom: 48px;
+}
+
+.title-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.title-row h2 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -0.035em;
+}
+
+.student-count {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  color: #858da0;
+  font-size: 13px;
+}
+
+.student-count strong {
+  color: #405bd7;
+  font-size: 18px;
+}
+
+.table-card {
+  overflow: hidden;
+  border: 1px solid #e7eaf1;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(35, 45, 78, 0.055);
+}
+
+.table-head,
+.student-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.table-head {
+  height: 48px;
+  color: #9aA1af;
+  background: #fafbfc;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.student-row {
+  min-height: 76px;
+  border-bottom: 1px solid #f0f2f6;
+  transition: background 160ms ease;
+}
+
+.student-row:last-child {
+  border-bottom: 0;
+}
+
+.student-row:hover {
+  background: #fafbff;
+}
+
+.student {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eef1ff;
+  color: #405bd7;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.roll-no,
+.marks span {
+  color: #9299a7;
+  font-size: 13px;
+}
+
+.marks strong {
+  margin-right: 3px;
+  font-size: 14px;
+}
+
+.status {
+  display: inline-flex;
+  min-width: 62px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.status.pass {
+  color: #16805a;
+  background: #dff4ea;
+}
+
+.status.fail {
+  color: #b44a58;
+  background: #fdebed;
+}
+
+.footer {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e7eaf1;
+  color: #969dab;
+  font-size: 12px;
+}
+
+@media (max-width: 680px) {
+  .header-inner,
+  .content,
+  .footer {
+    width: min(100% - 32px, 1120px);
+  }
+
+  .header {
+    height: 92px;
+  }
+
+  .term {
+    display: none;
+  }
+
+  .content {
+    padding-top: 34px;
+  }
+
+  .title-row h2 {
+    font-size: 24px;
+  }
+
+  .table-head {
+    display: none;
+  }
+
+  .student-row {
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    padding: 16px 18px;
+  }
+
+  .student-row .roll-no {
+    grid-column: 1;
+    margin-left: 50px;
+  }
+
+  .student-row .marks {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .student-row > div:last-child {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .footer p:last-child {
+    display: none;
+  }
+}
